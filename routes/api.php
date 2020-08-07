@@ -15,20 +15,17 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('/as',function(){
-    // $process = new Process('sudo sh /routes/script.sh');
-    // $process->run();
-    
-    // // executes after the command finishes
-    // if (!$process->isSuccessful()) {
-    //     throw new ProcessFailedException($process);
-    // }
-    
-    // echo $process->getOutput();
-    $command = escapeshellcmd('/Home/Ubuntu/script.sh'); 
+Route::get('/as/{htt}//{url}/{Thin}/{Api}/{nombre}',function($htt,$url,$Thin, $Api,$nomre){
+
+    https://github.com/Thincrs-bit/Api_React.git
+    $command = escapeshellcmd(`/Users/Nani/Desktop/script.sh {'$htt','$url','$Thin','$Api','$nomre'}`); 
     $output = shell_exec($command); 
     echo $output;
+    return "https://gitlab.com/thincrs-bit/$nomre";
  
 });
+
+
+
 
 
